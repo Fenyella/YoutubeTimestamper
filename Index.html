@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #614f00;
+                background-image: url("fennec.jpg");
+                background-repeat: no-repeat;
+                background-blend-mode: soft-light;
+            }
+            h1 {
+                color: wheat;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 200%;
+            }
+            p {
+                color: wheat;
+                font-family: "Courier New", Courier, monospace;
+                font-size: 150%;
+            }
+            .wrapper {
+                width: 400px;
+                max-width: 100%;
+                position: relative;
+            }
+            .wrapper input {
+                background: #a0a0a0;
+                width: 100%;
+                border: 2px solid white;
+                border-radius: 50px;
+                padding: 1rem 2rem;
+                width: 100%;
+            }
+            .wrapper button {
+                background-color: white;
+                border-radius: 50%;
+                height: 100%;
+                width: 22%;
+                aspect-ratio: 1;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 408px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Youtube Link Time-Stamper</h1>
+        <p>
+            Enter Youtube Link and the current hours, minutes and seconds
+            seperated by ","<br />
+            Example: https://www.youtube.com/watch?v=Abababa,1,20,35<br />
+            You get the current link with the added timestamp, to continue
+            watching later
+        </p>
+
+        <div class="wrapper">
+            <input type="text" placeholder="Youtube Link" id="YTLink" />
+            <input type="text" placeholder="Hours" id="YThours" />
+            <input type="text" placeholder="Minutes" id="YTmin" />
+            <input type="text" placeholder="Seconds" id="YTsec" />
+            <button onClick="linkFunction()" id="YTButton">Submit</button>
+        </div>
+
+        <p id="show"></p>
+
+        <script src="YTTimeStamper.js"></script>
+    </body>
+</html>
