@@ -22,7 +22,8 @@ while (
   function secsWithJavaScript(hours, min, sec) {
     return Math.floor(hours * 60 * 60 + min * 60 + sec);
   }
-  document.getElementById("show").innerHTML =
+  //Using innerText now - Avoiding XSS vuln
+  document.getElementById("show").innerText =
     ytLink + "&t=" + secsWithJavaScript(hours, min, sec) + "s";
   console.log(ytLink + "&t=" + secsWithJavaScript(hours, min, sec) + "s");
 }
